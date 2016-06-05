@@ -49,44 +49,44 @@ public class AuthUiActivity extends Activity {
 
     private static final int RC_SIGN_IN = 100;
 
-    @BindView(R.id.default_theme)
-    RadioButton mUseDefaultTheme;
-
-    @BindView(R.id.green_theme)
-    RadioButton mUseGreenTheme;
-
-    @BindView(R.id.purple_theme)
-    RadioButton mUsePurpleTheme;
-
-    @BindView(R.id.email_provider)
-    CheckBox mUseEmailProvider;
-
-    @BindView(R.id.google_provider)
-    CheckBox mUseGoogleProvider;
-
-    @BindView(R.id.facebook_provider)
-    CheckBox mUseFacebookProvider;
-
-    @BindView(R.id.google_tos)
-    RadioButton mUseGoogleTos;
-
-    @BindView(R.id.firebase_tos)
-    RadioButton mUseFirebaseTos;
-
-    @BindView(R.id.sign_in)
-    Button mSignIn;
-
+//    @BindView(R.id.default_theme)
+//    RadioButton mUseDefaultTheme;
+//
+//    @BindView(R.id.green_theme)
+//    RadioButton mUseGreenTheme;
+//
+//    @BindView(R.id.purple_theme)
+//    RadioButton mUsePurpleTheme;
+//
+//    @BindView(R.id.email_provider)
+//    CheckBox mUseEmailProvider;
+//
+//    @BindView(R.id.google_provider)
+//    CheckBox mUseGoogleProvider;
+//
+//    @BindView(R.id.facebook_provider)
+//    CheckBox mUseFacebookProvider;
+//
+//    @BindView(R.id.google_tos)
+//    RadioButton mUseGoogleTos;
+//
+//    @BindView(R.id.firebase_tos)
+//    RadioButton mUseFirebaseTos;
+//
+//    @BindView(R.id.sign_in)
+//    Button mSignIn;
+//
     @BindView(android.R.id.content)
     View mRootView;
-
-    @BindView(R.id.firebase_logo)
-    RadioButton mFirebaseLogo;
-
-    @BindView(R.id.google_logo)
-    RadioButton mGoogleLogo;
-
-    @BindView(R.id.no_logo)
-    RadioButton mNoLogo;
+//
+//    @BindView(R.id.firebase_logo)
+//    RadioButton mFirebaseLogo;
+//
+//    @BindView(R.id.google_logo)
+//    RadioButton mGoogleLogo;
+//
+//    @BindView(R.id.no_logo)
+//    RadioButton mNoLogo;
 
 
     @Override
@@ -101,22 +101,22 @@ public class AuthUiActivity extends Activity {
 
         setContentView(R.layout.auth_ui_layout);
         ButterKnife.bind(this);
-
-        if (!isGoogleConfigured()) {
-            mUseGoogleProvider.setChecked(false);
-            mUseGoogleProvider.setEnabled(false);
-            mUseGoogleProvider.setText(R.string.google_label_missing_config);
-        }
-
-        if (!isFacebookConfigured()) {
-            mUseFacebookProvider.setChecked(false);
-            mUseFacebookProvider.setEnabled(false);
-            mUseFacebookProvider.setText(R.string.facebook_label_missing_config);
-        }
-
-        if (!isGoogleConfigured() || !isFacebookConfigured()) {
-            showSnackbar(R.string.configuration_required);
-        }
+//
+//        if (!isGoogleConfigured()) {
+//            mUseGoogleProvider.setChecked(false);
+//            mUseGoogleProvider.setEnabled(false);
+//            mUseGoogleProvider.setText(R.string.google_label_missing_config);
+//        }
+//
+//        if (!isFacebookConfigured()) {
+//            mUseFacebookProvider.setChecked(false);
+//            mUseFacebookProvider.setEnabled(false);
+//            mUseFacebookProvider.setText(R.string.facebook_label_missing_config);
+//        }
+//
+//        if (!isGoogleConfigured() || !isFacebookConfigured()) {
+//            showSnackbar(R.string.configuration_required);
+//        }
     }
 
     @OnClick(R.id.sign_in)
@@ -161,13 +161,13 @@ public class AuthUiActivity extends Activity {
     @MainThread
     @StyleRes
     private int getSelectedTheme() {
-        if (mUseDefaultTheme.isChecked()) {
-            return AuthUI.getDefaultTheme();
-        }
+//        if (mUseDefaultTheme.isChecked()) {
+//            return AuthUI.getDefaultTheme();
+//        }
 
-        if (mUsePurpleTheme.isChecked()) {
-            return R.style.PurpleTheme;
-        }
+//        if (mUsePurpleTheme.isChecked()) {
+//            return R.style.PurpleTheme;
+//        }
 
         return R.style.GreenTheme;
     }
@@ -175,11 +175,11 @@ public class AuthUiActivity extends Activity {
     @MainThread
     @DrawableRes
     private int getSelectedLogo() {
-        if (mFirebaseLogo.isChecked()) {
-            return R.drawable.firebase_auth_120dp;
-        } else if (mGoogleLogo.isChecked()) {
-            return R.drawable.logo_googleg_color_144dp;
-        }
+//        if (mFirebaseLogo.isChecked()) {
+//            return R.drawable.firebase_auth_120dp;
+//        } else if (mGoogleLogo.isChecked()) {
+//            return R.drawable.logo_googleg_color_144dp;
+//        }
         return AuthUI.NO_LOGO;
     }
 
@@ -187,26 +187,27 @@ public class AuthUiActivity extends Activity {
     private String[] getSelectedProviders() {
         ArrayList<String> selectedProviders = new ArrayList<>();
 
-        if (mUseEmailProvider.isChecked()) {
-            selectedProviders.add(AuthUI.EMAIL_PROVIDER);
-        }
+//        if (mUseEmailProvider.isChecked()) {
+//            selectedProviders.add(AuthUI.EMAIL_PROVIDER);
+//        }
 
-        if (mUseFacebookProvider.isChecked()) {
-            selectedProviders.add(AuthUI.FACEBOOK_PROVIDER);
-        }
+//        if (mUseFacebookProvider.isChecked()) {
+//            selectedProviders.add(AuthUI.FACEBOOK_PROVIDER);
+//        }
+//
+//        if (mUseGoogleProvider.isChecked()) {
+//            selectedProviders.add(AuthUI.GOOGLE_PROVIDER);
+//        }
 
-        if (mUseGoogleProvider.isChecked()) {
-            selectedProviders.add(AuthUI.GOOGLE_PROVIDER);
-        }
-
+        selectedProviders.add(AuthUI.EMAIL_PROVIDER);
         return selectedProviders.toArray(new String[selectedProviders.size()]);
     }
 
     @MainThread
     private String getSelectedTosUrl() {
-        if (mUseGoogleTos.isChecked()) {
-            return GOOGLE_TOS_URL;
-        }
+//        if (mUseGoogleTos.isChecked()) {
+//            return GOOGLE_TOS_URL;
+//        }
 
         return FIREBASE_TOS_URL;
     }

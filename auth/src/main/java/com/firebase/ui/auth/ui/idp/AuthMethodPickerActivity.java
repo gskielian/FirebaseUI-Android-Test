@@ -73,11 +73,7 @@ public class AuthMethodPickerActivity
         populateIdpList(mActivityHelper.getFlowParams().providerInfo);
         int logoId = mActivityHelper.getFlowParams().logoId;
         ImageView logo = (ImageView) findViewById(R.id.logo);
-        if (logoId == AuthUI.NO_LOGO) {
-            logo.setVisibility(View.GONE);
-        } else {
-            logo.setImageResource(logoId);
-        }
+        logo.setImageResource(logoId);
     }
 
     private void populateIdpList(List<IDPProviderParcel> providers) {

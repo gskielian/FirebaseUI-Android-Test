@@ -126,5 +126,5 @@ public class GoogleProvider implements IDPProvider, OnClickListener {
         Auth.GoogleSignInApi.signOut(mGoogleApiClient);
         startLogin(mActivity);
     }
-}
 
+}

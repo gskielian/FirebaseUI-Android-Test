@@ -8,7 +8,7 @@
     <string name="desc_auth_ui">Demonstrates the Firebase Auth UI flow, with customization options.</string>
 
     <!-- strings for Auth UI demo activities -->
-    <eat-comment/>
+    <eat-comment />
     <string name="launch_title">FirebaseUI Auth Demo</string>
     <string name="sign_in">Start</string>
     <string name="green_theme">Green Theme</string>
@@ -40,4 +40,5 @@
     <string name="profile_picture_content_desc">Profile picture</string>
     <string name="default_theme">Default theme</string>
     <string name="configuration_required">Configuration is required - see README.md</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
 </resources>
