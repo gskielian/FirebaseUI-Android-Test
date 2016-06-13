@@ -36,6 +36,7 @@ public class ChooserActivity extends AppCompatActivity {
     private static final Class[] CLASSES = new Class[]{
             ChatActivity.class,
             AuthUiActivity.class,
+            DriverRev2Activity.class,
     };
 
     private static final int[] DESCRIPTION_NAMES = new int[] {
@@ -47,7 +48,7 @@ public class ChooserActivity extends AppCompatActivity {
     private static final int[] DESCRIPTION_IDS = new int[] {
             R.string.desc_chat,
             R.string.desc_auth_ui,
-            R.string.desc_auth_ui
+            R.string.desc_app_rev_2
     };
 
     @BindView(R.id.list_view)

@@ -32,6 +32,10 @@
         <activity
             android:name=".auth.SplashScreen"
             android:label="@string/title_activity_splash_screen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DriverRev2Activity"
+            android:label="@string/title_activity_driver_rev2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
