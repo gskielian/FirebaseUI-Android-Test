@@ -40,11 +40,13 @@ public class ChooserActivity extends AppCompatActivity {
 
     private static final int[] DESCRIPTION_NAMES = new int[] {
             R.string.name_chat,
-            R.string.name_auth_ui
+            R.string.name_auth_ui,
+            R.string.driver_app_rev_2
     };
 
     private static final int[] DESCRIPTION_IDS = new int[] {
             R.string.desc_chat,
+            R.string.desc_auth_ui,
             R.string.desc_auth_ui
     };
 
